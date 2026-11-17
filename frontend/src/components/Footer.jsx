@@ -1,0 +1,107 @@
+import { ArrowUpRight } from "lucide-react";
+import Logo from "./Logo";
+import { scrollToId } from "@/lib/scroll";
+
+const NAV = [
+  { id: "services", label: "Services" },
+  { id: "stack", label: "Tech Stack" },
+  { id: "process", label: "Process" },
+  { id: "work", label: "Work" },
+  { id: "insights", label: "Insights" },
+  { id: "faq", label: "FAQ" },
+  { id: "contact", label: "Contact" },
+];
+
+export const Footer = () => (
+  <footer className="border-t border-zinc-800/80 bg-[#0A0A0C] overflow-hidden" data-testid="footer">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-16 lg:pt-20">
+      <div className="grid lg:grid-cols-12 gap-12 pb-16">
+        <div className="lg:col-span-5">
+          <Logo />
+          <p className="mt-6 text-sm text-zinc-400 leading-relaxed max-w-sm">
+            Kuchoriya TechSoft builds custom software, mobile apps, AI, and
+            blockchain solutions for startups and enterprises. Get in touch
+            for a free quote.
+          </p>
+          <button
+            data-testid="footer-consult-cta"
+            onClick={() => scrollToId("contact")}
+            className="mt-8 inline-flex items-center gap-2 bg-white text-[#0A0A0C] text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-zinc-200 transition-colors"
+          >
+            Get a Free Consultation
+            <ArrowUpRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="lg:col-span-3">
+          <p className="font-mono2 text-[10px] uppercase tracking-[0.25em] text-zinc-500 mb-5">
+            Navigate
+          </p>
+          <ul className="space-y-3">
+            {NAV.map((n) => (
+              <li key={n.id}>
+                <button
+                  data-testid={`footer-${n.id}-link`}
+                  onClick={() => scrollToId(n.id)}
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  {n.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="lg:col-span-4">
+          <p className="font-mono2 text-[10px] uppercase tracking-[0.25em] text-zinc-500 mb-5">
+            Contact
+          </p>
+          <ul className="space-y-3 text-sm text-zinc-400">
+            <li>
+              <a
+                data-testid="footer-email-link"
+                href="mailto:info@kuchoriyatechsoft.com"
+                className="hover:text-white transition-colors"
+              >
+                info@kuchoriyatechsoft.com
+              </a>
+            </li>
+            <li>
+              <a data-testid="footer-phone-us-link" href="tel:+16504887911" className="hover:text-white transition-colors">
+                +1 (650) 488-7911
+              </a>
+              <span className="text-zinc-700"> · </span>
+              <a data-testid="footer-phone-in-link" href="tel:+918003156735" className="hover:text-white transition-colors">
+                +91-8003156735
+              </a>
+            </li>
+            <li data-testid="footer-address" className="leading-relaxed">
+              1100 Caven St, Suite PH11,
+              <br />
+              Mississauga, ON L5G 4N3, Canada
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div className="px-2 select-none pointer-events-none" aria-hidden="true">
+      <p className="font-display font-black text-stroke text-center leading-[0.85] tracking-tight text-[17.5vw] whitespace-nowrap">
+        KUCHORIYA
+      </p>
+    </div>
+
+    <div className="border-t border-zinc-800/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p className="font-mono2 text-[10px] uppercase tracking-[0.2em] text-zinc-600">
+          © {new Date().getFullYear()} Kuchoriya TechSoft. All rights reserved.
+        </p>
+        <p className="font-mono2 text-[10px] uppercase tracking-[0.2em] text-zinc-600">
+          AI-Driven Digital Solutions · Since 2009
+        </p>
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
