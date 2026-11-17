@@ -1,125 +1,125 @@
-import { Star, Quote, ArrowUpRight } from "lucide-react";
-import { Reveal, SectionHeading } from "./Reveal";
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { Reveal } from "./Reveal";
 import { scrollToId } from "@/lib/scroll";
 
-const WORK = [
+const PROJECTS = [
   {
-    tag: "Enterprise Software",
-    title: "Enterprise ERP Transformation",
-    desc: "A powerful ERP platform with expert consultation, innovative problem-solving, and scalable architecture — improving operational efficiency and driving long-term digital transformation.",
-    img: "https://images.unsplash.com/photo-1629904853716-f0bc54eea481?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-    stat: "ERP · Global Client",
+    id: "sixt-app",
+    title: "Sixt Rent a Car App",
+    category: "Mobile Application",
+    img: "/images/work/work-sixt-app.jpg",
+    alt: "Sixt Rent a Car Mobile App Development",
   },
   {
-    tag: "Fintech & AI",
-    title: "AI Analytics for Fintech",
-    desc: "Intelligent automation, predictive analytics, and real-time insight pipelines for financial platforms where every decision counts.",
-    img: "https://images.unsplash.com/photo-1579882392185-581038fbc8c5?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200",
-    stat: "AI · Fintech",
+    id: "sixt-fleet",
+    title: "Sixt Rent a Car",
+    category: "Fleet Management Platform",
+    img: "/images/work/work-sixt-fleet.jpg",
+    alt: "Sixt Fleet Management Web Platform",
   },
   {
-    tag: "Healthcare",
-    title: "Telehealth Care Suite",
-    desc: "Cross-platform remote care management connecting patients and clinicians — secure, compliant, and built for scale.",
-    img: "https://images.pexels.com/photos/5483057/pexels-photo-5483057.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    stat: "Mobile · Healthcare",
+    id: "epix-iptv",
+    title: "EPIX IPTV",
+    category: "Multi-Screen OTT Suite",
+    img: "/images/work/work-epix-iptv.jpg",
+    alt: "EPIX IPTV Smart TV and Mobile Streaming Platform",
+  },
+  {
+    id: "draftkings",
+    title: "DraftKings",
+    category: "Real-Time Fantasy Sports",
+    img: "/images/work/work-draftkings.jpg",
+    alt: "DraftKings Real-Time Fantasy Sports Engine",
   },
 ];
 
-export const CaseStudies = () => (
-  <section id="work" className="py-20 lg:py-32 bg-[#0D0D10] border-y border-zinc-800/80" data-testid="work-section">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-      <SectionHeading
-        eyebrow="Selected Work"
-        title={
-          <>
-            Real Products. <span className="text-[#F97316]">Measurable Outcomes.</span>
-          </>
-        }
-      />
-      <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-5">
-        {WORK.map((w, i) => (
-          <Reveal key={w.title} delay={i * 0.1} className="h-full">
-            <article
-              data-testid={`work-card-${i + 1}`}
-              className="group relative h-full rounded-2xl overflow-hidden border border-zinc-200/90 bg-[#FFFFFF] shadow-sm hover:shadow-lg transition-all duration-500"
-            >
-              <div className="relative h-52 overflow-hidden">
-                <img
-                  src={w.img}
-                  alt={w.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 font-mono2 text-[10px] uppercase tracking-[0.2em] bg-white/90 backdrop-blur border border-zinc-200 text-[#F97316] font-semibold px-3 py-1.5 rounded-full shadow-sm">
-                  {w.tag}
-                </span>
-              </div>
-              <div className="p-6 lg:p-7">
-                <h3 className="font-display text-xl font-semibold text-zinc-900 tracking-tight flex items-center justify-between">
-                  {w.title}
-                  <ArrowUpRight className="w-5 h-5 text-zinc-500 group-hover:text-zinc-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
-                </h3>
-                <p className="mt-3 text-sm text-zinc-600 leading-relaxed">
-                  {w.desc}
-                </p>
-                <p className="mt-5 font-mono2 text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-medium">
-                  {w.stat}
-                </p>
-              </div>
-            </article>
+export const CaseStudies = () => {
+  return (
+    <section 
+      id="work" 
+      className="py-20 lg:py-28 bg-[#0A0A0C] text-white border-y border-zinc-800/80" 
+      data-testid="work-section"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        
+        {/* Header */}
+        <div className="text-center max-w-4xl mx-auto mb-12 lg:mb-16">
+          <Reveal>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-[#FB771F]">
+              Explore Our Work
+            </h2>
           </Reveal>
-        ))}
-      </div>
-
-      <Reveal delay={0.15}>
-        <figure
-          data-testid="testimonial-card"
-          className="mt-14 relative rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] shadow-sm p-8 lg:p-12"
-        >
-          <Quote className="w-8 h-8 text-zinc-400 mb-6" />
-          <blockquote className="font-display text-lg lg:text-2xl font-medium text-zinc-900 leading-relaxed max-w-4xl tracking-tight">
-            "Kuchoriya TechSoft delivered a powerful ERP software solution with
-            expert consultation, innovative problem-solving, and scalable
-            architecture — helping improve operational efficiency and drive
-            long-term digital transformation and business growth."
-          </blockquote>
-          <figcaption className="mt-8 flex items-center gap-4">
-            <span className="grid place-items-center w-11 h-11 rounded-full bg-zinc-900 text-white font-display font-bold">
-              JM
-            </span>
-            <span>
-              <span className="block text-sm font-semibold text-zinc-900">
-                James Mitchell
-              </span>
-              <span className="block font-mono2 text-[11px] uppercase tracking-[0.2em] text-zinc-600 mt-1">
-                CEO · ERP Client
-              </span>
-            </span>
-            <span className="ml-auto flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-              ))}
-            </span>
-          </figcaption>
-        </figure>
-      </Reveal>
-
-      <Reveal delay={0.2}>
-        <div className="mt-10 text-center">
-          <button
-            data-testid="work-consult-cta"
-            onClick={() => scrollToId("contact")}
-            className="inline-flex items-center gap-2 bg-white text-[#0A0A0C] text-sm font-semibold px-7 py-4 rounded-full hover:bg-zinc-200 transition-colors duration-300"
-          >
-            Start Your Success Story
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
+          <Reveal delay={0.1}>
+            <p className="mt-4 text-base sm:text-lg text-zinc-300 leading-relaxed font-normal max-w-3xl mx-auto">
+              From web and mobile applications to enterprise software, we deliver future-ready solutions designed to drive growth, boost engagement, and adapt as your business scales.
+            </p>
+          </Reveal>
         </div>
-      </Reveal>
-    </div>
-  </section>
-);
+
+        {/* 4 Immersive Showcase Panels */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+          {PROJECTS.map((project, idx) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="group relative rounded-2xl overflow-hidden border border-zinc-800/90 hover:border-[#FB771F]/60 shadow-[0_15px_35px_rgba(0,0,0,0.8)] transition-all duration-300 bg-[#121216]"
+            >
+              {/* Full Image Canvas */}
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] w-full overflow-hidden">
+                <img
+                  src={project.img}
+                  alt={project.alt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
+                
+                {/* Clean Bottom Label */}
+                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5">
+                  <span className="text-[10px] font-mono2 uppercase tracking-widest text-[#FB771F] font-semibold block mb-0.5">
+                    {project.category}
+                  </span>
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-white tracking-tight">
+                    {project.title}
+                  </h3>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Executive Consultation Strip */}
+        <Reveal delay={0.2}>
+          <div className="mt-14 p-8 lg:p-10 rounded-2xl bg-gradient-to-r from-zinc-900/90 via-[#18181F] to-zinc-900/90 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+            <div>
+              <span className="text-xs font-mono2 uppercase tracking-widest text-[#FB771F] font-semibold block mb-1">
+                Enterprise Engineering Partner
+              </span>
+              <h4 className="font-display text-xl sm:text-2xl font-bold text-white tracking-tight">
+                Ready to build an industry-leading digital product?
+              </h4>
+              <p className="text-sm text-zinc-400 mt-1 max-w-xl">
+                Partner with Kuchoriya TechSoft for world-class mobile apps, OTT streaming suites, and enterprise scale.
+              </p>
+            </div>
+
+            <button
+              onClick={() => scrollToId("contact")}
+              className="shrink-0 inline-flex items-center gap-2.5 bg-[#FB771F] hover:bg-[#e66a17] text-white text-sm font-semibold px-7 py-4 rounded-full transition-all duration-300 shadow-md hover:gap-3.5"
+            >
+              Start Your Project
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+          </div>
+        </Reveal>
+
+      </div>
+    </section>
+  );
+};
 
 export default CaseStudies;

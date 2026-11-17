@@ -14,10 +14,10 @@ import {
 import { scrollToId } from "@/lib/scroll";
 
 const STATS = [
-  { value: "1000+", label: "Projects Delivered", detail: "Global Deployments" },
-  { value: "100+", label: "Industries Served", detail: "Fintech, Health, Retail" },
-  { value: "98%", label: "Client Retention", detail: "Long-term Partnerships" },
-  { value: "5.0 ★", label: "Clutch & GoodFirms", detail: "Top-Rated Tech Partner" },
+  { value: "15+ Years", label: "Industry Excellence", detail: "Founded in 2009" },
+  { value: "1,000+", label: "Projects Delivered", detail: "Across 50+ Countries" },
+  { value: "300+", label: "Expert Engineers", detail: "Top 1% Tech Talent" },
+  { value: "ISO 9001", label: "Quality Certified", detail: "2015 Global Standard" },
 ];
 
 /* -------------------------------------------------------------
@@ -305,25 +305,6 @@ const InteractiveGlobe = () => {
       className="relative w-full aspect-square max-w-[540px] mx-auto select-none cursor-grab active:cursor-grabbing flex items-center justify-center"
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
-      
-      {/* Cinematic HUD Overlay Telemetry */}
-      <div className="absolute top-3 left-4 pointer-events-none font-mono2 text-[10px] text-zinc-400 uppercase tracking-[0.2em] flex items-center gap-2">
-        <Radio className="w-3.5 h-3.5 text-[#FB771F] animate-pulse" />
-        <span>KUCHORIYA NEURAL SPHERE • LIVE</span>
-      </div>
-
-      <div className="absolute top-3 right-4 pointer-events-none font-mono2 text-[10px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full flex items-center gap-1.5">
-        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-        <span>1000+ NODES ONLINE</span>
-      </div>
-
-      <div className="absolute bottom-3 left-4 pointer-events-none font-mono2 text-[10px] text-zinc-400 tracking-wider">
-        <span className="text-zinc-300">ORBIT:</span> 180+ GLOBAL POPS &bull; <span className="text-emerald-400">12ms LATENCY</span>
-      </div>
-
-      <div className="absolute bottom-3 right-4 pointer-events-none font-mono2 text-[10px] text-zinc-500 tracking-wider">
-        <span>INTERACTIVE &bull; DRAG TO ROTATE</span>
-      </div>
     </div>
   );
 };
@@ -363,30 +344,17 @@ export const Hero = () => {
           {/* Left Column: Authoritative Enterprise Headlines & Copy */}
           <div className="lg:col-span-6 xl:col-span-7">
             
-            {/* Top Quality Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-zinc-300 text-xs font-mono2 uppercase tracking-[0.2em] mb-6 shadow-sm"
-            >
-              <span className="w-2 h-2 rounded-full bg-[#FB771F] animate-pulse" />
-              <span>Enterprise Digital Engineering</span>
-              <span className="text-zinc-600">•</span>
-              <span className="text-zinc-400">Since 2009</span>
-            </motion.div>
-
             {/* Main Headline */}
             <h1 className="font-display font-extrabold tracking-tight leading-[1.08] text-white text-4xl sm:text-5xl lg:text-[3.75rem]">
-              <span className="block">Architecting</span>
+              <span className="block">Transforming Ideas</span>
               <span className="block mt-1">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-400">
-                  AI-Driven Digital
+                  into Scalable Digital
                 </span>{" "}
-                <span className="text-[#FB771F]">Solutions</span>
+                <span className="text-[#FB771F]">Reality</span>
               </span>
               <span className="block mt-1 text-zinc-300 font-semibold">
-                for Modern Enterprises
+                with Custom Software &amp; AI
               </span>
             </h1>
 
@@ -397,7 +365,7 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.35 }}
               className="mt-6 text-base sm:text-lg text-zinc-300/95 leading-relaxed max-w-xl font-normal"
             >
-              <strong className="text-white font-semibold">Kuchoriya TechSoft</strong> delivers mission-critical software engineering, enterprise generative AI pipelines, and resilient cloud architectures. We transform ambitious business goals into scalable, high-yield digital reality.
+              <strong className="text-white font-semibold">Kuchoriya TechSoft</strong> is an ISO 9001:2015 certified global software and mobile app development company founded in 2009. We engineer high-performance mobile applications, enterprise web platforms, generative AI pipelines, and cloud solutions for startups, SMEs, and Fortune 500 enterprises.
             </motion.p>
 
             {/* Strategic Call to Actions */}
@@ -425,27 +393,6 @@ export const Hero = () => {
                 <span>Explore Capabilities</span>
                 <ArrowDown className="w-4 h-4 text-zinc-400" />
               </button>
-            </motion.div>
-
-            {/* Trust Proof Endorsement Strip */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.65 }}
-              className="mt-10 pt-6 border-t border-zinc-800/70 flex flex-wrap items-center gap-6 text-xs text-zinc-400"
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#FB771F]" />
-                <span className="text-zinc-300 font-medium">100% IP Ownership</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span className="text-zinc-300 font-medium">SOC 2 & ISO 27001 Aligned</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-4 h-4 text-amber-400" />
-                <span className="text-zinc-300 font-medium">Top 1% Global Engineering Talent</span>
-              </div>
             </motion.div>
 
           </div>

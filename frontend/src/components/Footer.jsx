@@ -19,14 +19,20 @@ export const Footer = () => (
         <div className="lg:col-span-5">
           <Logo />
           <p className="mt-6 text-sm text-zinc-400 leading-relaxed max-w-sm">
-            Kuchoriya TechSoft builds custom software, mobile apps, AI, and
-            blockchain solutions for startups and enterprises. Get in touch
-            for a free quote.
+            Kuchoriya TechSoft is an ISO 9001:2015 certified global software and mobile app development company. Connect. Compute. Create.
           </p>
+          <div className="mt-4 flex items-center gap-2">
+            <span className="text-[11px] font-mono2 uppercase tracking-wider text-[#FB771F] font-semibold bg-[#FB771F]/10 border border-[#FB771F]/30 px-3 py-1 rounded-full">
+              ISO 9001:2015 Certified
+            </span>
+            <span className="text-[11px] font-mono2 uppercase tracking-wider text-zinc-400 border border-zinc-800 px-3 py-1 rounded-full">
+              Est. 2009
+            </span>
+          </div>
           <button
             data-testid="footer-consult-cta"
             onClick={() => scrollToId("contact")}
-            className="mt-8 inline-flex items-center gap-2 bg-white text-[#0A0A0C] text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-zinc-200 transition-colors"
+            className="mt-7 inline-flex items-center gap-2 bg-[#FB771F] hover:bg-[#e66a17] text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-colors shadow-sm"
           >
             Get a Free Consultation
             <ArrowUpRight className="w-4 h-4" />
