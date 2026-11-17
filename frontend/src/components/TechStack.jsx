@@ -32,11 +32,16 @@ const TABS = Object.keys(STACK);
 export const TechStack = () => {
   const [active, setActive] = useState(TABS[0]);
   return (
-    <section id="stack" className="py-20 lg:py-32 bg-[#0D0D10] border-y border-zinc-800/80" data-testid="stack-section">
+    <section id="stack" className="py-20 lg:py-32 bg-[#FFFFFF] border-y border-zinc-200" data-testid="stack-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <SectionHeading
+          dark={true}
           eyebrow="Our Tech Stack"
-          title="Battle-Tested Technologies, Enterprise-Grade Delivery"
+          title={
+            <>
+              <span className="text-[#F97316]">Battle-Tested</span> Technologies, Enterprise-Grade Delivery
+            </>
+          }
         />
         <Reveal delay={0.15}>
           <div className="mt-10 flex flex-wrap gap-2" role="tablist">
@@ -49,12 +54,12 @@ export const TechStack = () => {
                 onClick={() => setActive(t)}
                 className={`font-mono2 text-[11px] uppercase tracking-[0.15em] px-4 py-2.5 rounded-full border transition-all duration-300 ${
                   active === t
-                    ? "bg-white text-[#0A0A0C] border-white font-semibold"
-                    : "text-zinc-400 border-zinc-800 hover:border-zinc-600 hover:text-white"
+                    ? "bg-[#FB771F] text-white border-[#FB771F] font-semibold shadow-md shadow-[#FB771F]/20"
+                    : "text-zinc-600 border-zinc-300 bg-zinc-50 hover:border-zinc-400 hover:text-zinc-900"
                 }`}
               >
                 {t}
-                <span className="ml-2 opacity-50">{STACK[t].length}</span>
+                <span className="ml-2 opacity-60">{STACK[t].length}</span>
               </button>
             ))}
           </div>
@@ -62,9 +67,9 @@ export const TechStack = () => {
         <div className="mt-8 flex flex-wrap gap-3" role="tabpanel" data-testid="tech-grid">
           {STACK[active].map((tech, i) => (
             <Reveal key={tech} delay={i * 0.04} y={14}>
-              <span className="inline-flex items-center gap-3 bg-zinc-900/50 border border-zinc-800/80 rounded-xl px-5 py-3.5 text-sm text-zinc-200 hover:border-zinc-600 hover:bg-zinc-900 transition-all duration-300 cursor-default">
-                <span className="w-1.5 h-1.5 bg-white rounded-full" />
-                {tech}
+              <span className="inline-flex items-center gap-3 bg-[#F8F9FA] border border-zinc-200/90 rounded-xl px-5 py-3.5 text-sm font-medium text-zinc-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:bg-white hover:border-[#F97316]/50 transition-all duration-300 cursor-default group">
+                <span className="w-1.5 h-1.5 bg-[#F97316] rounded-full" />
+                <span className="group-hover:text-[#F97316] transition-colors">{tech}</span>
               </span>
             </Reveal>
           ))}

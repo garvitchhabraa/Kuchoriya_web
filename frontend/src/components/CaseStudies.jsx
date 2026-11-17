@@ -31,36 +31,40 @@ export const CaseStudies = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
       <SectionHeading
         eyebrow="Selected Work"
-        title="Real Products. Measurable Outcomes."
+        title={
+          <>
+            Real Products. <span className="text-[#F97316]">Measurable Outcomes.</span>
+          </>
+        }
       />
       <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-5">
         {WORK.map((w, i) => (
           <Reveal key={w.title} delay={i * 0.1} className="h-full">
             <article
               data-testid={`work-card-${i + 1}`}
-              className="group relative h-full rounded-2xl overflow-hidden border border-zinc-800/80 bg-zinc-950 hover:border-zinc-600 transition-all duration-500"
+              className="group relative h-full rounded-2xl overflow-hidden border border-zinc-200/90 bg-[#FFFFFF] shadow-sm hover:shadow-lg transition-all duration-500"
             >
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={w.img}
                   alt={w.title}
                   loading="lazy"
-                  className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 font-mono2 text-[10px] uppercase tracking-[0.2em] bg-[#0A0A0C]/80 backdrop-blur border border-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                <span className="absolute top-4 left-4 font-mono2 text-[10px] uppercase tracking-[0.2em] bg-white/90 backdrop-blur border border-zinc-200 text-[#F97316] font-semibold px-3 py-1.5 rounded-full shadow-sm">
                   {w.tag}
                 </span>
               </div>
               <div className="p-6 lg:p-7">
-                <h3 className="font-display text-xl font-semibold text-white tracking-tight flex items-center justify-between">
+                <h3 className="font-display text-xl font-semibold text-zinc-900 tracking-tight flex items-center justify-between">
                   {w.title}
-                  <ArrowUpRight className="w-5 h-5 text-zinc-600 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  <ArrowUpRight className="w-5 h-5 text-zinc-500 group-hover:text-zinc-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                 </h3>
-                <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
+                <p className="mt-3 text-sm text-zinc-600 leading-relaxed">
                   {w.desc}
                 </p>
-                <p className="mt-5 font-mono2 text-[10px] uppercase tracking-[0.2em] text-zinc-600">
+                <p className="mt-5 font-mono2 text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-medium">
                   {w.stat}
                 </p>
               </div>
@@ -72,30 +76,30 @@ export const CaseStudies = () => (
       <Reveal delay={0.15}>
         <figure
           data-testid="testimonial-card"
-          className="mt-14 relative rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-8 lg:p-12"
+          className="mt-14 relative rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] shadow-sm p-8 lg:p-12"
         >
-          <Quote className="w-8 h-8 text-zinc-700 mb-6" />
-          <blockquote className="font-display text-lg lg:text-2xl font-medium text-white leading-relaxed max-w-4xl tracking-tight">
+          <Quote className="w-8 h-8 text-zinc-400 mb-6" />
+          <blockquote className="font-display text-lg lg:text-2xl font-medium text-zinc-900 leading-relaxed max-w-4xl tracking-tight">
             "Kuchoriya TechSoft delivered a powerful ERP software solution with
             expert consultation, innovative problem-solving, and scalable
             architecture — helping improve operational efficiency and drive
             long-term digital transformation and business growth."
           </blockquote>
           <figcaption className="mt-8 flex items-center gap-4">
-            <span className="grid place-items-center w-11 h-11 rounded-full bg-white text-[#0A0A0C] font-display font-bold">
+            <span className="grid place-items-center w-11 h-11 rounded-full bg-zinc-900 text-white font-display font-bold">
               JM
             </span>
             <span>
-              <span className="block text-sm font-semibold text-white">
+              <span className="block text-sm font-semibold text-zinc-900">
                 James Mitchell
               </span>
-              <span className="block font-mono2 text-[11px] uppercase tracking-[0.2em] text-zinc-500 mt-1">
+              <span className="block font-mono2 text-[11px] uppercase tracking-[0.2em] text-zinc-600 mt-1">
                 CEO · ERP Client
               </span>
             </span>
             <span className="ml-auto flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-white text-white" />
+                <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
               ))}
             </span>
           </figcaption>

@@ -45,17 +45,26 @@ export const Estimator = ({ onEstimate }) => {
   return (
     <section id="estimator" className="py-20 lg:py-32" data-testid="estimator-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="rounded-3xl border border-zinc-800/80 bg-gradient-to-b from-zinc-900/60 to-zinc-950 p-8 lg:p-14">
+        <div className="rounded-3xl border border-zinc-200/90 bg-[#FFFFFF] shadow-lg p-8 lg:p-14">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeading
                 eyebrow="Project Estimator"
-                title="Scope Your Project in 30 Seconds"
-                intro="Three quick questions. Instant guidance on the right engagement — then book a free discovery call to pressure-test it with our strategists."
+                title={
+                  <>
+                    Scope Your Project in <span className="text-[#F97316]">30 Seconds</span>
+                  </>
+                }
+                intro={
+                  <>
+                    Three quick questions. <span className="text-[#F97316]">Instant guidance</span> on the right engagement — then book a free discovery call to pressure-test it with our strategists.
+                  </>
+                }
+                className="[&_h2]:text-zinc-900 [&_p]:text-zinc-600 [&_.font-mono2]:text-zinc-500"
               />
               <Reveal delay={0.2}>
-                <div className="mt-8 flex items-center gap-3 font-mono2 text-[11px] uppercase tracking-[0.2em] text-zinc-500">
-                  <Calculator className="w-4 h-4" />
+                <div className="mt-8 flex items-center gap-3 font-mono2 text-[11px] uppercase tracking-[0.2em] text-zinc-500 font-medium">
+                  <Calculator className="w-4 h-4 text-zinc-700" />
                   No email required
                 </div>
               </Reveal>
@@ -63,7 +72,7 @@ export const Estimator = ({ onEstimate }) => {
 
             <Reveal delay={0.1}>
               <div
-                className="rounded-2xl border border-zinc-800 bg-[#0A0A0C] p-6 lg:p-8 min-h-[280px]"
+                className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 lg:p-8 min-h-[280px] shadow-sm"
                 data-testid="estimator-panel"
               >
                 <div className="flex items-center justify-between mb-6">
@@ -75,7 +84,7 @@ export const Estimator = ({ onEstimate }) => {
                       <span
                         key={i}
                         className={`h-1 w-8 rounded-full transition-colors duration-300 ${
-                          done || i < step ? "bg-white" : "bg-zinc-800"
+                          done || i < step ? "bg-zinc-900" : "bg-zinc-300"
                         }`}
                       />
                     ))}
@@ -91,7 +100,7 @@ export const Estimator = ({ onEstimate }) => {
                       exit={{ opacity: 0, x: -24 }}
                       transition={{ duration: 0.35 }}
                     >
-                      <h3 className="font-display text-xl font-semibold text-white">
+                      <h3 className="font-display text-xl font-semibold text-zinc-900">
                         {current.q}
                       </h3>
                       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -100,7 +109,7 @@ export const Estimator = ({ onEstimate }) => {
                             key={opt}
                             data-testid={`estimator-option-${opt.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                             onClick={() => pick(opt)}
-                            className="text-left text-sm text-zinc-300 border border-zinc-800 rounded-xl px-4 py-3.5 hover:border-white hover:text-white hover:bg-zinc-900 transition-all duration-300"
+                            className="text-left text-sm text-zinc-800 bg-[#FFFFFF] border border-zinc-200 rounded-xl px-4 py-3.5 hover:border-zinc-900 hover:text-zinc-900 shadow-sm transition-all duration-300"
                           >
                             {opt}
                           </button>
@@ -114,13 +123,13 @@ export const Estimator = ({ onEstimate }) => {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4 }}
                     >
-                      <span className="grid place-items-center w-10 h-10 rounded-full bg-white text-[#0A0A0C] mb-5">
+                      <span className="grid place-items-center w-10 h-10 rounded-full bg-zinc-900 text-white mb-5">
                         <Check className="w-5 h-5" />
                       </span>
-                      <h3 className="font-display text-xl font-semibold text-white">
+                      <h3 className="font-display text-xl font-semibold text-zinc-900">
                         Recommended: Dedicated Agile Team
                       </h3>
-                      <p className="mt-3 text-sm text-zinc-400 leading-relaxed">
+                      <p className="mt-3 text-sm text-zinc-600 leading-relaxed">
                         A {answers.type?.toLowerCase()} with a{" "}
                         {answers.timeline?.toLowerCase()} timeline fits our
                         dedicated team model at a {answers.budget?.toLowerCase()}{" "}

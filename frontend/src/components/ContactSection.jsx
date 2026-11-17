@@ -19,7 +19,7 @@ const SERVICE_OPTIONS = [
 ];
 
 const inputCls =
-  "w-full bg-zinc-950/60 border border-zinc-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-zinc-400 transition-colors duration-300";
+  "w-full bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors duration-300";
 
 export const ContactSection = ({ prefill }) => {
   const [form, setForm] = useState({
@@ -80,8 +80,16 @@ export const ContactSection = ({ prefill }) => {
         <div>
           <SectionHeading
             eyebrow="Get Started"
-            title="Book Your Free Discovery Call"
-            intro="Tell us where you're headed. We'll reply within one business day with honest, expert guidance — no pushy sales scripts, ever."
+            title={
+              <>
+                Book Your <span className="text-[#F97316]">Free Discovery Call</span>
+              </>
+            }
+            intro={
+              <>
+                Tell us where you're headed. We'll reply within one business day with <span className="text-[#F97316]">honest, expert guidance</span> — no pushy sales scripts, ever.
+              </>
+            }
           />
           <div className="mt-10 space-y-5">
             {[
@@ -142,7 +150,7 @@ export const ContactSection = ({ prefill }) => {
           <form
             onSubmit={submit}
             data-testid="consultation-form"
-            className="rounded-2xl border border-zinc-800/80 bg-zinc-950/60 p-6 lg:p-8 space-y-4"
+            className="rounded-2xl border border-zinc-200/90 bg-[#FFFFFF] shadow-lg p-6 lg:p-8 space-y-4"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <input
@@ -174,7 +182,7 @@ export const ContactSection = ({ prefill }) => {
               />
               <select
                 data-testid="contact-form-service-select"
-                className={`${inputCls} appearance-none ${form.service ? "text-white" : "text-zinc-600"}`}
+                className={`${inputCls} appearance-none ${form.service ? "text-zinc-900" : "text-zinc-400"}`}
                 value={form.service}
                 onChange={set("service")}
               >
@@ -182,7 +190,7 @@ export const ContactSection = ({ prefill }) => {
                   Service Needed
                 </option>
                 {SERVICE_OPTIONS.map((s) => (
-                  <option key={s} value={s} className="bg-[#0A0A0C]">
+                  <option key={s} value={s} className="bg-white text-zinc-900">
                     {s}
                   </option>
                 ))}
@@ -190,7 +198,7 @@ export const ContactSection = ({ prefill }) => {
             </div>
             <select
               data-testid="contact-form-budget-select"
-              className={`${inputCls} appearance-none ${form.budget ? "text-white" : "text-zinc-600"}`}
+              className={`${inputCls} appearance-none ${form.budget ? "text-zinc-900" : "text-zinc-400"}`}
               value={form.budget}
               onChange={set("budget")}
             >
@@ -199,7 +207,7 @@ export const ContactSection = ({ prefill }) => {
               </option>
               {["Under $10,000", "$10,000–$25,000", "$25,000–$50,000", "$50,000+", "Not sure yet"].map(
                 (b) => (
-                  <option key={b} value={b} className="bg-[#0A0A0C]">
+                  <option key={b} value={b} className="bg-white text-zinc-900">
                     {b}
                   </option>
                 )
@@ -218,7 +226,7 @@ export const ContactSection = ({ prefill }) => {
               data-testid="contact-form-submit-button"
               type="submit"
               disabled={sending}
-              className="w-full inline-flex items-center justify-center gap-2.5 bg-white text-[#0A0A0C] text-sm font-semibold px-7 py-4 rounded-full hover:bg-zinc-200 transition-all duration-300 disabled:opacity-60"
+              className="w-full inline-flex items-center justify-center gap-2.5 bg-zinc-900 text-white text-sm font-semibold px-7 py-4 rounded-full hover:bg-zinc-800 transition-all duration-300 disabled:opacity-60"
             >
               {sending ? (
                 <Loader2 className="w-4 h-4 animate-spin" />

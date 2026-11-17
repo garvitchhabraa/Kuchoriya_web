@@ -9,6 +9,7 @@ import CaseStudies from "@/components/CaseStudies";
 import Estimator from "@/components/Estimator";
 import Insights from "@/components/Insights";
 import FAQ from "@/components/FAQ";
+import OurOffices from "@/components/OurOffices";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -26,6 +27,7 @@ export default function Home() {
         <Estimator />
         <Insights />
         <FAQ />
+        <OurOffices />
         <ContactSection />
       </main>
       <Footer />

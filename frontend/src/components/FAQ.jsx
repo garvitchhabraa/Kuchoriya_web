@@ -43,7 +43,11 @@ export const FAQ = () => (
       <div className="lg:col-span-2">
         <SectionHeading
           eyebrow="FAQ"
-          title="Frequently Asked Questions"
+          title={
+            <span className="text-[#F97316]">
+              Frequently Asked Questions
+            </span>
+          }
           intro="Straight answers on engagement, cost, timelines, and security — the same questions every serious buyer asks."
         />
       </div>
@@ -54,7 +58,7 @@ export const FAQ = () => (
               <Accordion.Item
                 value={`faq-${i}`}
                 data-testid="faq-accordion-item"
-                className="border-b border-zinc-800/80"
+                className="border-b border-[#F97316]/50 hover:border-[#F97316] transition-colors"
               >
                 <Accordion.Trigger className="group flex w-full items-center justify-between gap-6 py-6 text-left">
                   <span className="font-display text-base lg:text-lg font-medium text-white group-hover:text-zinc-300 transition-colors">

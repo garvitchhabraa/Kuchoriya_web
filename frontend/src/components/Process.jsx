@@ -39,8 +39,16 @@ export const Process = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
       <SectionHeading
         eyebrow="How We Work"
-        title="A Proven Delivery Framework, Refined Since 2009"
-        intro="Requirement analysis to post-launch support — one accountable team, full transparency at every step."
+        title={
+          <>
+            A Proven <span className="text-[#F97316]">Delivery Framework</span>, Refined Since 2009
+          </>
+        }
+        intro={
+          <>
+            Requirement analysis to post-launch support — one accountable team, <span className="text-[#F97316]">full transparency</span> at every step.
+          </>
+        }
       />
       <div className="mt-16 relative">
         <div className="absolute left-[19px] lg:left-1/2 top-0 bottom-0 w-px bg-zinc-800 lg:-translate-x-1/2" />
@@ -66,7 +74,7 @@ export const Process = () => (
                     i % 2 === 0 ? "lg:pr-14 lg:text-right" : "lg:pl-14"
                   }`}
                 >
-                  <p className="font-mono2 text-xs text-zinc-500 tracking-[0.25em]">
+                  <p className="font-mono2 text-xs text-[#F97316] font-semibold tracking-[0.25em]">
                     {s.n}
                   </p>
                   <h3 className="font-display text-xl font-semibold text-white mt-2 tracking-tight">
