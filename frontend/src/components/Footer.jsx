@@ -85,10 +85,12 @@ export const Footer = () => (
       </div>
     </div>
 
-    <div className="px-2 select-none pointer-events-none overflow-hidden" aria-hidden="true">
-      <p className="font-display font-black text-white text-center leading-[0.85] tracking-tight text-[14vw] sm:text-[16vw] lg:text-[17.5vw] whitespace-nowrap">
-        KUCHORIYA
-      </p>
+    <div className="relative pt-12 pb-6 px-4 select-none overflow-hidden" aria-hidden="true">
+      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
+        <p className="font-display font-extrabold text-center leading-none tracking-tight text-[12vw] sm:text-[13.5vw] lg:text-[14.8vw] whitespace-nowrap text-zinc-100/90 selection:bg-transparent">
+          KUCHORIYA
+        </p>
+      </div>
     </div>
 
     <div className="border-t border-zinc-800/80">
