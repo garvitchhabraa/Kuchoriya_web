@@ -265,7 +265,7 @@ export const Services = () => {
 
         {/* Horizontal Category Pill Tabs matching Pic 1 */}
         <Reveal delay={0.1}>
-          <div className="flex flex-wrap gap-2.5 sm:gap-3" role="tablist">
+          <div className="flex flex-wrap gap-2 sm:gap-3" role="tablist">
             {OFFERINGS.map((offering) => {
               const isActive = offering.id === activeTabId;
 
@@ -276,7 +276,7 @@ export const Services = () => {
                   aria-selected={isActive}
                   data-testid={`service-tab-${offering.id}`}
                   onClick={() => setActiveTabId(offering.id)}
-                  className={`font-mono2 text-[11px] uppercase tracking-[0.15em] px-4 py-2.5 rounded-full border transition-all duration-200 flex items-center gap-2 ${
+                  className={`font-mono2 text-[10px] sm:text-[11px] uppercase tracking-[0.12em] sm:tracking-[0.15em] px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full border transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${
                     isActive
                       ? "bg-[#FB771F] text-white border-[#FB771F] font-semibold shadow-md shadow-[#FB771F]/25"
                       : "text-zinc-600 border-zinc-300/80 bg-zinc-50 hover:bg-zinc-100 hover:text-zinc-950 hover:border-zinc-400"
@@ -284,7 +284,7 @@ export const Services = () => {
                 >
                   <span>{offering.shortTitle}</span>
                   <span
-                    className={`text-[10px] px-1.5 py-0.2 rounded-full ${
+                    className={`text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-full ${
                       isActive
                         ? "bg-white/20 text-white"
                         : "bg-zinc-200/80 text-zinc-600 font-medium"
@@ -299,7 +299,7 @@ export const Services = () => {
         </Reveal>
 
         {/* Capabilities Pills Grid matching Pic 1 pill badges */}
-        <div className="mt-8 flex flex-wrap gap-3" role="tabpanel" data-testid="service-pills">
+        <div className="mt-6 sm:mt-8 flex flex-wrap gap-2.5 sm:gap-3" role="tabpanel" data-testid="service-pills">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeOffering.id}
@@ -307,14 +307,14 @@ export const Services = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="flex flex-wrap gap-3 w-full"
+              className="flex flex-wrap gap-2.5 sm:gap-3 w-full"
             >
               {activeOffering.subServices.map((sub) => (
                 <div
                   key={sub.name}
-                  className="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3.5 text-sm font-semibold bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#FB771F] text-zinc-900 shadow-xs hover:shadow-md hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
+                  className="inline-flex items-center gap-2 sm:gap-2.5 rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#FB771F] text-zinc-900 shadow-xs hover:shadow-md hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#FB771F] group-hover:scale-125 transition-transform" />
+                  <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#FB771F] group-hover:scale-125 transition-transform" />
                   <span className="group-hover:text-[#FB771F] transition-colors">
                     {sub.name}
                   </span>

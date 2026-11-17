@@ -606,7 +606,7 @@ export const TechStack = () => {
 
         {/* Horizontal Category Pill Tabs */}
         <Reveal delay={0.1}>
-          <div className="flex flex-wrap gap-2.5 sm:gap-3" role="tablist">
+          <div className="flex flex-wrap gap-2 sm:gap-3" role="tablist">
             {TABS.map((t) => (
               <button
                 key={t}
@@ -614,14 +614,14 @@ export const TechStack = () => {
                 aria-selected={active === t}
                 data-testid={`tech-tab-${t.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                 onClick={() => setActive(t)}
-                className={`font-mono2 text-[11px] uppercase tracking-[0.15em] px-4 py-2.5 rounded-full border transition-all duration-200 flex items-center gap-2 ${
+                className={`font-mono2 text-[10px] sm:text-[11px] uppercase tracking-[0.12em] sm:tracking-[0.15em] px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full border transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${
                   active === t
                     ? "bg-[#FB771F] text-white border-[#FB771F] font-semibold shadow-md shadow-[#FB771F]/25"
                     : "text-zinc-600 border-zinc-300/80 bg-zinc-50 hover:bg-zinc-100 hover:text-zinc-950 hover:border-zinc-400"
                 }`}
               >
                 <span>{t}</span>
-                <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${active === t ? "bg-white/20 text-white" : "bg-zinc-200/80 text-zinc-600 font-medium"}`}>
+                <span className={`text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-full ${active === t ? "bg-white/20 text-white" : "bg-zinc-200/80 text-zinc-600 font-medium"}`}>
                   {STACK[t].length}
                 </span>
               </button>
@@ -630,7 +630,7 @@ export const TechStack = () => {
         </Reveal>
 
         {/* Technology Pills Grid matching the exact card style with authentic logos */}
-        <div className="mt-8 flex flex-wrap gap-3" role="tabpanel" data-testid="tech-grid">
+        <div className="mt-6 sm:mt-8 flex flex-wrap gap-2.5 sm:gap-3" role="tabpanel" data-testid="tech-grid">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -638,12 +638,12 @@ export const TechStack = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2 }}
-              className="flex flex-wrap gap-3 w-full"
+              className="flex flex-wrap gap-2.5 sm:gap-3 w-full"
             >
               {STACK[active].map((tech) => (
                 <div
                   key={tech}
-                  className="inline-flex items-center gap-3 bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#FB771F] rounded-2xl px-5 py-3.5 text-sm font-semibold text-zinc-900 shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
+                  className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#FB771F] rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-zinc-900 shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
                 >
                   <TechLogo name={tech} />
                   <span className="group-hover:text-[#FB771F] transition-colors">

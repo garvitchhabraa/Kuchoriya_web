@@ -141,7 +141,7 @@ export const Estimator = ({ onEstimate }) => {
                           onClick={() => {
                             scrollToId("contact");
                           }}
-                          className="inline-flex items-center gap-2 bg-white text-[#0A0A0C] text-sm font-semibold px-6 py-3 rounded-full hover:bg-zinc-200 transition-colors"
+                          className="inline-flex items-center gap-2 bg-[#FB771F] hover:bg-[#e66a17] text-white text-sm font-semibold px-6 py-3 rounded-full shadow-sm transition-colors"
                         >
                           Book the Free Call
                           <ArrowRight className="w-4 h-4" />
@@ -149,7 +149,7 @@ export const Estimator = ({ onEstimate }) => {
                         <button
                           data-testid="estimator-restart-button"
                           onClick={reset}
-                          className="inline-flex items-center gap-2 border border-zinc-700 text-zinc-300 text-sm px-6 py-3 rounded-full hover:border-zinc-400 hover:text-white transition-colors"
+                          className="inline-flex items-center gap-2 border border-zinc-300 text-zinc-700 hover:border-zinc-900 hover:text-zinc-950 text-sm px-6 py-3 rounded-full transition-colors"
                         >
                           <RotateCcw className="w-4 h-4" />
                           Restart
