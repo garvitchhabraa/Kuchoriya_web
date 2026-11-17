@@ -161,17 +161,17 @@ export const OurOffices = () => {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-14 gap-x-8">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 sm:gap-y-12 lg:gap-y-14 gap-x-4 sm:gap-x-6 lg:gap-x-8">
           {OFFICES.map((office, idx) => (
             <Reveal key={office.country} delay={idx * 0.05}>
-              <div className="group flex flex-col items-center text-center">
-                <div className="h-14 flex items-end justify-center mb-5 text-zinc-300 group-hover:text-[#F97316] transition-colors">
+              <div className="group flex flex-col items-center text-center p-2 sm:p-0">
+                <div className="h-12 sm:h-14 flex items-end justify-center mb-4 sm:mb-5 text-zinc-300 group-hover:text-[#F97316] transition-colors">
                   {office.svg}
                 </div>
-                <h3 className="font-display text-sm font-bold tracking-[0.18em] uppercase text-white group-hover:text-[#F97316] transition-colors pb-1.5 border-b border-transparent group-hover:border-[#F97316]/40 inline-block">
+                <h3 className="font-display text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.18em] uppercase text-white group-hover:text-[#F97316] transition-colors pb-1 border-b border-transparent group-hover:border-[#F97316]/40 inline-block">
                   {office.country}
                 </h3>
-                <p className="mt-3 text-xs text-zinc-400 leading-relaxed max-w-[210px]">
+                <p className="mt-2 sm:mt-3 text-[11px] sm:text-xs text-zinc-400 leading-relaxed max-w-[190px] sm:max-w-[210px]">
                   {office.address}
                 </p>
               </div>

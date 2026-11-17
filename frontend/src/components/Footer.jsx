@@ -85,8 +85,8 @@ export const Footer = () => (
       </div>
     </div>
 
-    <div className="px-2 select-none pointer-events-none" aria-hidden="true">
-      <p className="font-display font-black text-stroke text-center leading-[0.85] tracking-tight text-[17.5vw] whitespace-nowrap">
+    <div className="px-2 select-none pointer-events-none overflow-hidden" aria-hidden="true">
+      <p className="font-display font-black text-stroke text-center leading-[0.85] tracking-tight text-[14vw] sm:text-[16vw] lg:text-[17.5vw] whitespace-nowrap">
         KUCHORIYA
       </p>
     </div>
