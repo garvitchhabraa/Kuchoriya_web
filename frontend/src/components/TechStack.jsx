@@ -598,7 +598,7 @@ export const TechStack = () => {
             eyebrow="Our Tech Stack"
             title={
               <>
-                <span className="text-[#FB771F]">Battle-Tested</span> Technologies, Enterprise-Grade Delivery
+                <span className="text-[#F97316]">Battle-Tested</span> Technologies, <span className="text-[#F97316]">Enterprise-Grade</span> Delivery
               </>
             }
           />
@@ -616,7 +616,7 @@ export const TechStack = () => {
                 onClick={() => setActive(t)}
                 className={`font-mono2 text-[10px] sm:text-[11px] uppercase tracking-[0.12em] sm:tracking-[0.15em] px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full border transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${
                   active === t
-                    ? "bg-[#FB771F] text-white border-[#FB771F] font-semibold shadow-md shadow-[#FB771F]/25"
+                    ? "bg-[#F97316] text-white border-[#F97316] font-semibold shadow-md shadow-[#F97316]/25"
                     : "text-zinc-600 border-zinc-300/80 bg-zinc-50 hover:bg-zinc-100 hover:text-zinc-950 hover:border-zinc-400"
                 }`}
               >
@@ -643,10 +643,10 @@ export const TechStack = () => {
               {STACK[active].map((tech) => (
                 <div
                   key={tech}
-                  className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#FB771F] rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-zinc-900 shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
+                  className="inline-flex items-center gap-2.5 sm:gap-3 bg-[#FFFFFF] border border-zinc-200/90 hover:border-[#F97316] rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-zinc-900 shadow-xs hover:shadow-md hover:-translate-y-0.5 hover:bg-orange-50/20 transition-all duration-200 cursor-default group"
                 >
                   <TechLogo name={tech} />
-                  <span className="group-hover:text-[#FB771F] transition-colors">
+                  <span className="group-hover:text-[#F97316] transition-colors">
                     {tech}
                   </span>
                 </div>

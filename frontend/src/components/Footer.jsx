@@ -4,8 +4,9 @@ import { scrollToId } from "@/lib/scroll";
 
 const NAV = [
   { id: "services", label: "Services" },
+  { id: "industries", label: "Industries" },
+  { id: "process", label: "How We Work" },
   { id: "stack", label: "Tech Stack" },
-  { id: "process", label: "Process" },
   { id: "work", label: "Work" },
   { id: "insights", label: "Insights" },
   { id: "faq", label: "FAQ" },
@@ -22,7 +23,7 @@ export const Footer = () => (
             Kuchoriya TechSoft is an ISO 9001:2015 certified global software and mobile app development company. Connect. Compute. Create.
           </p>
           <div className="mt-4 flex items-center gap-2">
-            <span className="text-[11px] font-mono2 uppercase tracking-wider text-[#FB771F] font-semibold bg-[#FB771F]/10 border border-[#FB771F]/30 px-3 py-1 rounded-full">
+            <span className="text-[11px] font-mono2 uppercase tracking-wider text-[#F97316] font-semibold bg-[#F97316]/10 border border-[#F97316]/30 px-3 py-1 rounded-full">
               ISO 9001:2015 Certified
             </span>
             <span className="text-[11px] font-mono2 uppercase tracking-wider text-zinc-400 border border-zinc-800 px-3 py-1 rounded-full">
@@ -32,7 +33,7 @@ export const Footer = () => (
           <button
             data-testid="footer-consult-cta"
             onClick={() => scrollToId("contact")}
-            className="mt-7 inline-flex items-center gap-2 bg-[#FB771F] hover:bg-[#e66a17] text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-colors shadow-sm"
+            className="mt-7 inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#ea580c] text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-colors shadow-sm cursor-pointer"
           >
             Get a Free Consultation
             <ArrowUpRight className="w-4 h-4" />

@@ -94,6 +94,14 @@ html.lenis body {
         -webkit-backdrop-filter: blur(20px);
         background: rgba(10, 10, 12, 0.82);
     }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
 
 @keyframes marquee-x {
@@ -110,7 +118,21 @@ html.lenis body {
     animation: marquee-x 45s linear infinite;
 }
 
-.marquee-paused:hover .animate-marquee {
+@keyframes marquee-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-marquee-reverse {
+    animation: marquee-reverse 50s linear infinite;
+}
+
+.marquee-paused:hover .animate-marquee,
+.marquee-paused:hover .animate-marquee-reverse {
     animation-play-state: paused;
 }
 

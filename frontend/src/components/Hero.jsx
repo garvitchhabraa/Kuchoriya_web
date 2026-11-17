@@ -351,10 +351,10 @@ export const Hero = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-400">
                   into Scalable Digital
                 </span>{" "}
-                <span className="text-[#FB771F]">Reality</span>
+                <span className="text-[#F97316]">Reality</span>
               </span>
               <span className="block mt-1 text-zinc-300 font-semibold">
-                with Custom Software &amp; AI
+                with <span className="text-[#F97316]">Custom Software</span> &amp; <span className="text-[#F97316]">AI</span>
               </span>
             </h1>
 
@@ -365,7 +365,7 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.35 }}
               className="mt-6 text-base sm:text-lg text-zinc-300/95 leading-relaxed max-w-xl font-normal"
             >
-              <strong className="text-white font-semibold">Kuchoriya TechSoft</strong> is an ISO 9001:2015 certified global software and mobile app development company founded in 2009. We engineer high-performance mobile applications, enterprise web platforms, generative AI pipelines, and cloud solutions for startups, SMEs, and Fortune 500 enterprises.
+              <strong className="text-white font-semibold">Kuchoriya TechSoft</strong> is an <span className="text-[#F97316] font-semibold">ISO 9001:2015 certified</span> global software and <span className="text-[#F97316] font-semibold">mobile app development</span> company founded in 2009. We engineer high-performance mobile applications, enterprise web platforms, <span className="text-[#F97316] font-semibold">generative AI pipelines</span>, and cloud solutions for <span className="text-[#F97316] font-semibold">startups, SMEs, and Fortune 500</span> enterprises.
             </motion.p>
 
             {/* Strategic Call to Actions */}
@@ -378,7 +378,7 @@ export const Hero = () => {
               <button
                 data-testid="hero-schedule-cta"
                 onClick={() => scrollToId("contact")}
-                className="group relative inline-flex items-center gap-2.5 bg-[#FB771F] hover:bg-[#e66a17] text-white text-sm font-semibold px-7 py-4 rounded-full transition-all duration-300 shadow-[0_10px_25px_rgba(251,119,31,0.25)] hover:shadow-[0_12px_30px_rgba(251,119,31,0.35)] hover:gap-3.5"
+                className="group relative inline-flex items-center gap-2.5 bg-[#F97316] hover:bg-[#ea580c] text-white text-sm font-semibold px-7 py-4 rounded-full transition-all duration-300 shadow-[0_10px_25px_rgba(249,115,22,0.25)] hover:shadow-[0_12px_30px_rgba(249,115,22,0.35)] hover:gap-3.5"
               >
                 <Sparkles className="w-4 h-4 text-white" />
                 <span>Schedule Free Consultation</span>
@@ -427,7 +427,7 @@ export const Hero = () => {
                 i === 2 ? "pl-0 lg:pl-6 border-l-0 lg:border-l" : ""
               }`}
             >
-              <p className="font-display text-3xl lg:text-4xl font-bold text-white tracking-tight">
+              <p className="font-display text-3xl lg:text-4xl font-bold text-[#F97316] tracking-tight">
                 {s.value}
               </p>
               <p className="font-medium text-xs sm:text-sm text-zinc-200 mt-1">
