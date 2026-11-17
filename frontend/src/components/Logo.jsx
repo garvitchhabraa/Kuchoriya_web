@@ -6,7 +6,7 @@ export const Logo = ({ compact = false, className = "" }) => (
     <img
       src={logoImg}
       alt="Kuchoriya TechSoft - Connect. Compute. Create."
-      className="h-8 sm:h-9 w-auto object-contain select-none"
+      className="h-8 sm:h-9 w-auto object-contain select-none mix-blend-screen"
     />
   </span>
 );
