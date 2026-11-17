@@ -154,11 +154,9 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75 }}
-          className="mt-8 max-w-xl text-base sm:text-lg text-zinc-400 leading-relaxed"
+          className="mt-8 max-w-2xl text-base sm:text-lg text-zinc-300 leading-relaxed"
         >
-          We build custom mobile apps, generative AI solutions, and
-          high-performance digital products that solve real problems — shipped
-          fast, built to scale, and ready for whatever comes next.
+          <strong className="text-white font-medium">Kuchoriya TechSoft</strong> is an enterprise digital engineering and custom software development company founded in 2009. We engineer high-performance mobile applications, custom web platforms, generative AI automation pipelines, and scalable cloud architectures for startups, mid-market leaders, and Fortune 500 enterprises.
         </motion.p>
 
         <motion.div

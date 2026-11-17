@@ -4,36 +4,36 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 const FAQS = [
   {
-    q: "What services does your custom development company offer?",
-    a: "We provide a full suite of software development services, including custom app development tailored to your business needs, UI/UX design, app strategy and consulting, ongoing maintenance & support, quality assurance and testing, and backend development and API integration.",
+    q: "How much does custom software and AI development cost?",
+    a: "Custom software development typically ranges from $10,000 to $25,000 for initial MVPs and from $25,000 to $100,000+ for complex enterprise platforms with custom AI models, high-volume transactional pipelines, and multi-tier cloud architectures. Costs are governed by platform targets, architectural depth, security compliance, and third-party integrations. We provide detailed, itemized proposals with zero hidden fees following an initial discovery workshop.",
   },
   {
-    q: "Do you specialize in developing apps for iOS, Android, or both?",
-    a: "Our team specializes in building high-performance native iOS and Android apps as well as cross-platform mobile applications to maximize your reach and ROI.",
+    q: "How long does it take to develop a custom mobile app or web platform?",
+    a: "A standard commercial MVP typically requires 10 to 14 weeks from technical discovery to initial production deployment. Large-scale enterprise platforms or advanced generative AI integrations typically span 4 to 6 months divided into structured two-week agile release sprints with continuous milestone demonstrations.",
   },
   {
-    q: "How much does mobile app development cost?",
-    a: "App development cost varies based on features and complexity, platforms (iOS, Android, or both), and design and integrations required. Book a free consultation to get a personalized, no-obligation estimate.",
+    q: "How do you guarantee the security and privacy of proprietary data in AI solutions?",
+    a: "We deploy private, isolated LLM tenant environments (utilizing AWS Bedrock, Azure OpenAI, or GCP Vertex AI) with explicit zero-data-retention agreements. Your proprietary enterprise data is never used to train public foundation models, and all data transmission is secured with end-to-end TLS 1.3 encryption and AES-256 encryption at rest.",
   },
   {
-    q: "How long does it take to develop a mobile app?",
-    a: "The typical development timeframe ranges from 3 to 6 months, depending on the app's scope and features. We follow an agile approach to deliver your custom app on schedule.",
+    q: "Does our company own 100% of the source code and intellectual property?",
+    a: "Yes, 100%. Under our master services agreement, all developed source code, design assets, database architectures, and intellectual property transfer to your organization upon project milestones, backed by comprehensive mutual non-disclosure agreements (NDAs).",
   },
   {
-    q: "What is your app development process?",
-    a: "Our process includes requirement analysis, wireframing and UI/UX design, development and coding, rigorous testing for quality assurance, deployment and app store submission, and post-launch maintenance and updates.",
+    q: "Do you specialize in developing apps for iOS, Android, or cross-platform?",
+    a: "Our team specializes in building high-performance native iOS (Swift) and Android (Kotlin) apps as well as cross-platform mobile applications using React Native and Flutter to maximize reach, maintain native device fluidity, and reduce total cost of ownership.",
   },
   {
-    q: "Do you provide app maintenance and updates after launch?",
-    a: "Yes — we offer continuous mobile app maintenance and support to ensure your app remains secure, updated, and performs optimally long after launch.",
+    q: "What is your 6-stage app and software development framework?",
+    a: "Our delivery lifecycle includes: (1) Technical Discovery & Architecture Audit, (2) Wireframing & UI/UX Design, (3) Agile Development Sprints with bi-weekly demos, (4) Automated QA & OWASP Security Testing, (5) Zero-Downtime Deployment & App Store Publishing, and (6) Continuous SLA Maintenance & Optimization.",
   },
   {
-    q: "How do you ensure the security of apps you develop?",
-    a: "Security is a top priority. We implement data encryption, secure user authentication, and regular vulnerability testing to protect your apps and user data.",
+    q: "Do you provide post-launch maintenance, SLAs, and updates?",
+    a: "Yes. We offer structured Service Level Agreements (SLAs) including 24/7 uptime monitoring, critical vulnerability patching, OS upgrade compatibility (iOS/Android updates), and dedicated monthly development hours for continuous feature iterations.",
   },
   {
-    q: "Can you integrate third-party services and APIs into the app?",
-    a: "Absolutely. We have expertise integrating popular third-party APIs — payment gateways, social media, analytics tools, and more — to extend your app's capabilities.",
+    q: "Can you augment our existing engineering team with dedicated developers?",
+    a: "Yes. We provide vetted senior full-stack developers, AI engineers, and QA specialists who seamlessly integrate into your existing development team, Jira boards, and GitHub repos within 48 to 72 hours under transparent sprint structures.",
   },
 ];
 
